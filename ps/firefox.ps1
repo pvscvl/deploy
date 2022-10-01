@@ -1,0 +1,5 @@
+
+$WebClient = New-Object System.Net.WebClient
+Write-Host "Aktuellstes Firefox Setup wird geladen..."
+$WebClient.DownloadFile("https://download.mozilla.org/?product=firefox-latest&os=win64&lang=de",".\setups\firefox.exe")
+Write-Host "Aktuellstes Firefox Setup wurde geladen..."
