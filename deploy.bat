@@ -1,8 +1,6 @@
 @echo off
-
 :: requires Administrator privileges.
 call :isAdmin
-
 if %errorlevel% == 0 (
   goto :run
 ) else if "%1" == "admin_session" (
@@ -23,9 +21,6 @@ if %errorlevel% == 0 (
 
 
 :UACPrompt
-
-
-:: Configuring IKEv2 VPN connection...,
 powershell "New-Item -ItemType Directory -Force -Path .\setups"
 rem powershell -ExecutionPolicy Bypass -f .\ps\npp.ps1
 rem powershell -ExecutionPolicy Bypass -f .\ps\firefox.ps1
